@@ -1,0 +1,88 @@
+.button-control {
+  transition-duration: 2s;
+}
+
+.button-top-on {
+  transform-origin: left center;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.button-middle-on {
+  width: 1px;
+  background-color: black;
+  border: black;
+}
+
+.button-ground-on {
+  transform-origin: left center;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.menu-dropdown {
+  transition-duration: 500ms;
+}
+
+.show-menu {
+  height: 208px;
+}
+
+.hidden-menu {
+  height: 0px;
+}
+
+.item-position {
+  position: relative;
+  transition-duration: 500ms;
+}
+
+.contract-portfolio {
+  opacity: 0;
+  top: -4px;
+}
+
+.deploy-portfolio {
+  top: 0px;
+  opacity: 1;
+}
+
+.contract-resume {
+  opacity: 0;
+  top: -48px;
+}
+
+.deploy-resume {
+  opacity: 1;
+  top: 0px;
+}
+
+.contract-aboutme {
+  opacity: 0;
+  top: -94px;
+}
+
+.deploy-aboutme {
+  opacity: 1;
+  top: 0px;
+}
+
+.contract-blog {
+  opacity: 0;
+  top: -138px;
+}
+
+.deploy-blog {
+  opacity: 1;
+  top: 0px;
+}
+
+.contract-contact {
+  opacity: 0;
+  top: -182px;
+}
+
+.deploy-contact {
+  opacity: 1;
+  top: 0px;
+}
