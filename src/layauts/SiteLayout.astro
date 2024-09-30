@@ -1,7 +1,7 @@
 ---
 import "@fontsource/bangers";
-import "@fontsource/geist-sans";
 
+import Footer from "../components/footer/footer.astro";
 import Navbar from "../components/navbar/Navbar.astro";
 
 import "../styles/global.css";
@@ -17,8 +17,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body >
     <Navbar />
     <slot />
+    <!-- <Footer /> -->
   </body>
 </html>

@@ -1,0 +1,53 @@
+---
+import Title from "../Title.astro";
+import Card from "./components/Card.astro";
+
+interface ItemsServicesInterface {
+  id: number;
+  logo: string;
+  title: string;
+  content: string;
+}
+
+const itemsServices: ItemsServicesInterface[] = [
+  {
+    id: 1,
+    logo:  'ProductLogo',
+    title: "Diseño de producto",
+    content: "Diseño e implementación de proyectos a código",
+  },
+  {
+    id: 2,
+    logo: 'WebApp',
+    title: "Aplicaciones web",
+    content:
+      "Diseño e implementación de páginas y aplicaciones web adaptables a dispositivos de escritorio y móviles.",
+  },
+  {
+    id: 3,
+    logo: 'AppMobile',
+    title: "Aplicaciones Móviles",
+    content: "Diseño e implementación de aplicaciones móviles.",
+  },
+  {
+    id: 4,
+    logo: 'Api',
+    title: "Desarrollo de Api´s",
+    content: "Diseño e implementación de Rest Apis",
+  },
+];
+---
+
+<div class="px-4">
+  <Title title="Servicios" />
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    {
+      itemsServices.map((element) => {
+        return (
+          <Card title={element.title} content={element.content} logo={element.logo} />
+        );
+      })
+    }
+  </div>
+ 
+</div>

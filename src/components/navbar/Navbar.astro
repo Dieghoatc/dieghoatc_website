@@ -4,19 +4,39 @@ import Logo from "../../assets/logo.png";
 import "./menuMobile.css";
 ---
 
-<section class="">
+<section class="mx-5">
   <header class="relative">
-    <div class="w-full mx-auto h-16 px-5 flex justify-between items-center">
+    <div class="w-full mx-auto h-16 flex justify-between items-center">
       <div class="flex gap-3 h-full items-center">
-        <div>
-          <img src={Logo.src} alt="Logo Dieghoatc" class="w-14 h-14" />
+        <div class="logo">
+          <img
+            src={Logo.src}
+            alt="Logo Dieghoatc"
+            class="w-14 h-14 logo-rotate"
+          />
         </div>
         <div>
           <span class="text-secondary text-2xl">Dieghoatc</span>
         </div>
       </div>
 
-      <div class="flex flex-col gap-2 items-center z-20" id="toggle-on">
+      <div class="hidden md:block">
+        <nav>
+          <ul class="flex gap-4">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Resumen</a></li>
+            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="flex flex-col gap-2 items-center z-20 md:hidden"
+        id="toggle-on"
+      >
         <div
           class="bg-white w-7 h-0.5 border border-white rounded button-control"
           id="button-top"
@@ -34,36 +54,29 @@ import "./menuMobile.css";
         </div>
       </div>
 
-      <div class="hidden md:block">
+      <div
+        class="text-2xl flex justify-center absolute top-[68px] left-0 w-full z-10 menu-dropdown hidden-menu backdrop-blur-md p-4"
+        id="show-menu"
+      >
         <nav>
-          <ul class="flex">
-            <li>Inicio</li>
-            <li>Portafolio</li>
-            <li>Resumen</li>
-            <li>Sobre mi</li>
-            <li>Blog</li>
-            <li>Contacto</li>
+          <ul class="flex flex-col gap-3 items-center">
+            <li class="item-position contract-portfolio" id="deploy-portfolio">
+              Portafolio
+            </li>
+            <li class="item-position contract-resume" id="deploy-resume">
+              Resumen
+            </li>
+            <li class="item-position contract-aboutme" id="deploy-aboutme">
+              Sobre mi
+            </li>
+            <li class="item-position contract-blog" id="deploy-blog">Blog</li>
+            <li class="item-position contract-contact" id="deploy-contact">
+              Contacto
+            </li>
           </ul>
         </nav>
       </div>
-
-      <div
-      class="text-2xl flex justify-center absolute top-[68px] left-0 w-full z-10 backdrop-blur-md menu-dropdown hidden-menu"
-      id="show-menu"
-    >
-      <nav>
-        <ul class="flex flex-col gap-3 items-center">
-          <li class="item-position contract-portfolio" id="deploy-portfolio">Portafolio</li>
-          <li class="item-position contract-resume " id="deploy-resume">Resumen</li>
-          <li class="item-position contract-aboutme" id="deploy-aboutme">Sobre mi</li>
-          <li class="item-position contract-blog" id="deploy-blog">Blog</li>
-          <li class="item-position contract-contact" id="deploy-contact">Contacto</li>
-        </ul>
-      </nav>
     </div>
-    </div>
-
-    
   </header>
 </section>
 

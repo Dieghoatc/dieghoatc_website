@@ -1,0 +1,31 @@
+---
+import Api from "./Api.astro";
+import AppMobile from "./AppMobile.astro";
+import ProductLogo from "./ProductLogo.astro";
+import WebApp from "./WebApp.astro";
+
+import './card.css'
+
+interface Props {
+  logo: string;
+  title: string;
+  content: string;
+}
+
+const { title, content, logo } = Astro.props;
+---
+
+<div
+  class="border border-gray-950 rounded bg-neutral-950 flex flex-col justify-center items-center px-12 py-9 hover-section"
+>
+<div class=" flex flex-col gap-4 justify-center items-center">
+  <div class="h-24 w-24 p-5 rounded-full bg-black circle" >
+    <div>{logo === "ProductLogo" ? <ProductLogo /> : null}</div>
+    <div>{logo === "WebApp" ? <WebApp /> : null}</div>
+    <div>{logo === "AppMobile" ? <AppMobile /> : null}</div>
+    <div>{logo === "Api" ? <Api /> : null}</div>
+  </div>
+  <h2>{title}</h2>
+</div>
+  <p class="font-secondary text-gray-400 text-center text-sm">{content}</p>
+</div>

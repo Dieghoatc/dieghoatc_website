@@ -1,3 +1,16 @@
+.logo-rotate {
+  animation: rotating-logo 100s linear infinite;
+}
+
+@keyframes rotating-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .button-control {
   transition-duration: 2s;
 }
@@ -21,15 +34,28 @@
 }
 
 .menu-dropdown {
-  transition-duration: 500ms;
+  transition-duration: 200ms;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    100% 100%,
+    74% 85%,
+    25% 85%,
+    0 100%,
+    0% 30%
+  );
 }
 
 .show-menu {
-  height: 208px;
+  height: 270px;
+  visibility: visible;
+  border-top: 1px solid #202020;
 }
 
 .hidden-menu {
   height: 0px;
+  visibility: hidden;
 }
 
 .item-position {

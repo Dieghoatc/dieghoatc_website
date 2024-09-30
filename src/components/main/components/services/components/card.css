@@ -1,0 +1,27 @@
+.hover-section {
+  fill: #4b5563;
+  transition:
+    fill 500ms,
+    border 400ms,
+    color 300ms;
+}
+
+.hover-section:hover {
+  fill: #d1b000;
+}
+
+.hover-section .circle {
+  border: 1px solid #6b7280;
+}
+
+.hover-section:hover .circle {
+  border: 1px solid #d1b000;
+}
+
+.hover-section h2 {
+  color: #d1d5db;
+}
+
+.hover-section:hover h2 {
+  color: #d1b000;
+}
