@@ -1,13 +1,12 @@
 ---
+import AboutMe from "./components/aboutme/AboutMe.astro";
+import Portfolio from "./components/portfolio/Portfolio.astro";
 import Services from "./components/services/Services.astro";
-import Title from "./components/Title.astro"
 
 ---
 
-<main>
-    <Services />
-    <!-- <Title title="Portafolio" />
-    <Title title="Resumen" />
-    <Title title="Sobre mi" />
-    <Title title="Contacto" /> -->
+<main class="flex flex-col justify-center items-center">
+    <Services  /> 
+    <Portfolio />
+    <AboutMe />
 </main>

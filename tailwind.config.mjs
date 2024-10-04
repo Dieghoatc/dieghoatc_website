@@ -7,8 +7,12 @@ export default {
       secondary: ["Geist Sans", "sans-serif;"],
     },
     extend: {
+      maxWidth: {
+        maxwidth: "1100px",
+      },
       colors: {
         secondary: "#d1b000",
+        tertiary: "#f1f7fecf",
       },
       backgroundColor: {
         secondary: "#d1b000",

@@ -2,12 +2,13 @@
 import Logo from "../../assets/logo.png";
 
 import "./menuMobile.css";
+import "./navbar.css";
 ---
 
-<section class="mx-5">
-  <header class="relative">
-    <div class="w-full mx-auto h-16 flex justify-between items-center">
-      <div class="flex gap-3 h-full items-center">
+<div class="flex w-full flex-col py-2 fixed z-10 backdrop-blur-sm ">
+  <header class="flex justify-center " >
+    <div class="max-w-maxwidth flex w-full items-center justify-between mx-5 xl:mx-auto">
+      <div class="flex items-center gap-2">
         <div class="logo">
           <img
             src={Logo.src}
@@ -16,17 +17,16 @@ import "./menuMobile.css";
           />
         </div>
         <div>
-          <span class="text-secondary text-2xl">Dieghoatc</span>
+          <span ><a href="/" class="text-secondary text-2xl">Dieghoatc</a></span>
         </div>
       </div>
 
       <div class="hidden md:block">
         <nav>
           <ul class="flex gap-4">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Portafolio</a></li>
-            <li><a href="#">Resumen</a></li>
-            <li><a href="#">Sobre mi</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <!-- <li><a href="#">Resumen</a></li> -->
+            <li><a href="#about-me">Sobre mi</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contacto</a></li>
           </ul>
@@ -34,7 +34,7 @@ import "./menuMobile.css";
       </div>
 
       <div
-        class="flex flex-col gap-2 items-center z-20 md:hidden"
+        class="flex flex-col gap-2 items-center md:hidden"
         id="toggle-on"
       >
         <div
@@ -52,34 +52,32 @@ import "./menuMobile.css";
           id="button-bottom"
         >
         </div>
-      </div>
-
-      <div
-        class="text-2xl flex justify-center absolute top-[68px] left-0 w-full z-10 menu-dropdown hidden-menu backdrop-blur-md p-4"
+      </div>     
+    </div>
+    <div
+        class="text-2xl flex justify-center absolute top-[68px] w-full menu-dropdown hidden-menu bg-black"
         id="show-menu"
       >
-        <nav>
+        <nav id="list-menu">
           <ul class="flex flex-col gap-3 items-center">
             <li class="item-position contract-portfolio" id="deploy-portfolio">
-              Portafolio
+              <a href="#portfolio">Portafolio</a>
             </li>
             <li class="item-position contract-resume" id="deploy-resume">
-              Resumen
+              -
             </li>
             <li class="item-position contract-aboutme" id="deploy-aboutme">
-              Sobre mi
+              <a href="#about-me">Sobre mi</a>  
             </li>
-            <li class="item-position contract-blog" id="deploy-blog">Blog</li>
-            <li class="item-position contract-contact" id="deploy-contact">
-              Contacto
+            <li class="item-position contract-blog" id="deploy-blog"><a href="#">Blog</a></li>
+            <li class="item-position contract-contact" id="deploy-contact">   
             </li>
           </ul>
         </nav>
       </div>
-    </div>
   </header>
-</section>
-
+</div>
+ 
 <script>
   import { burgerContol } from "./menuMobile";
 
@@ -88,13 +86,16 @@ import "./menuMobile.css";
   const buttonMiddle = document.getElementById("button-middle");
   const buttonGround = document.getElementById("button-bottom");
 
+
   const showMenu = document.getElementById("show-menu");
 
-  const deployPortfolio = document.getElementById("deploy-portfolio");
-  const deployResume = document.getElementById("deploy-resume");
-  const deployAboutMe = document.getElementById("deploy-aboutme");
-  const deployBlog = document.getElementById("deploy-blog");
-  const deployContact = document.getElementById("deploy-contact");
+  const portfolio = document.getElementById("deploy-portfolio");
+  const resume = document.getElementById("deploy-resume");
+  const aboutMe = document.getElementById("deploy-aboutme");
+  const blog = document.getElementById("deploy-blog");
+  const contact = document.getElementById("deploy-contact");
+  
+  const listMenu = document.getElementById('list-menu')
 
   if (
     toggleOn &&
@@ -102,11 +103,11 @@ import "./menuMobile.css";
     buttonMiddle &&
     buttonGround &&
     showMenu &&
-    deployPortfolio &&
-    deployResume &&
-    deployAboutMe &&
-    deployBlog &&
-    deployContact
+    portfolio &&
+    resume &&
+    aboutMe &&
+    blog &&
+    contact && listMenu
   ) {
     const buttonSides = {
       toggleOn,
@@ -114,13 +115,14 @@ import "./menuMobile.css";
       buttonMiddle,
       buttonGround,
       showMenu,
-      deployPortfolio,
-      deployResume,
-      deployAboutMe,
-      deployBlog,
-      deployContact,
+      portfolio,
+      resume,
+      aboutMe,
+      blog,
+      contact,listMenu
     };
 
     burgerContol(buttonSides);
   }
+  
 </script>

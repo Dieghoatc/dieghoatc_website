@@ -36,18 +36,18 @@ const itemsServices: ItemsServicesInterface[] = [
     content: "Diseño e implementación de Rest Apis",
   },
 ];
----
 
-<div class="px-4">
-  <Title title="Servicios" />
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-    {
-      itemsServices.map((element) => {
-        return (
-          <Card title={element.title} content={element.content} logo={element.logo} />
-        );
-      })
-    }
-  </div>
- 
-</div>
+---
+  <section class="mx-5 max-w-maxwidth ">
+    <Title title="Services" />
+    <article class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {
+        itemsServices.map((element) => {
+          return (
+            <Card title={element.title} content={element.content} logo={element.logo} />
+          );
+        })
+      }
+    </article>
+  </section>
+

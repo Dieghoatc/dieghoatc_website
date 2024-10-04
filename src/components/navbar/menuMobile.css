@@ -34,22 +34,15 @@
 }
 
 .menu-dropdown {
-  transition-duration: 200ms;
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 30%,
-    100% 100%,
-    74% 85%,
-    25% 85%,
-    0 100%,
-    0% 30%
-  );
+  padding-top: 20px;
+  overflow: hidden;
+
+  transition-duration: 1s;
 }
 
 .show-menu {
-  height: 270px;
   visibility: visible;
+  height: 700px;
   border-top: 1px solid #202020;
 }
 
@@ -60,7 +53,7 @@
 
 .item-position {
   position: relative;
-  transition-duration: 500ms;
+  transition-duration: 200ms;
 }
 
 .contract-portfolio {
