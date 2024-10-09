@@ -5,6 +5,7 @@ export interface Position {
 }
 
 export interface Experience {
+  id: number;
   company: string;
   logo: string;
   link: string;

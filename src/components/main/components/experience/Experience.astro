@@ -6,6 +6,7 @@ import { type Experience } from "./components/timelineType";
 
 const experience: Experience[] = [
   {
+    id: 1,
     company: "Grupo R5",
     logo: "R5Logo.src",
     link: "https://www.grupor5.com",
@@ -25,6 +26,7 @@ const experience: Experience[] = [
     ],
   },
   {
+    id: 2,
     company: "Grupo Cubo",
     logo: "CuboLogo.src",
     link: "https://www.grupo-cubo.com/indexEN.html",
@@ -43,10 +45,6 @@ const experience: Experience[] = [
 <section class="flex flex-col justify-center items-center">
   <Title title="Experiencia" />
   <div class="mx-5 max-w-[1100px]">
-    {
-      experience.map((experience) => (
-        <TimeLineSection experience={experience} />
-      ))
-    }
+    {experience.map((experience) => <p>holas</p>)}
   </div>
 </section>
