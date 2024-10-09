@@ -45,6 +45,10 @@ const experience: Experience[] = [
 <section class="flex flex-col justify-center items-center">
   <Title title="Experiencia" />
   <div class="mx-5 max-w-[1100px]">
-    {experience.map((experience) => <p>holas</p>)}
+    {
+      experience.map((experience) => {
+        return <TimeLineSection experience={experience} />;
+      })
+    }
   </div>
 </section>
