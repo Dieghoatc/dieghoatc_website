@@ -1,0 +1,56 @@
+---
+import Title from "../Title.astro";
+import Timeline from "./components/Timeline.astro";
+import TimeLineSection from "./components/TimeLineSection.astro";
+import R5Logo from "../../../../assets/portfolio/r5-logo.svg";
+import CuboLogo from "../../../../assets/portfolio/gcubo-logo.png";
+import "./experience.css";
+
+import { type Experience } from "./components/timelineType";
+
+const experience: Experience[] = [
+  {
+    company: "Grupo R5",
+    logo: R5Logo.src,
+    link: "https://www.grupor5.com",
+    positions: [
+      {
+        title: "Desarrollador Frontend Junior",
+        time: "2021 - 2023",
+        description:
+          "Desarrollo de interfaces de usuario utilizando React, implementando CSS modules para estilos y Storybook para la creación de componentes reutilizables. Actualización de la arquitectura de la aplicación web alineados a mejores practicas de desarrollo.",
+      },
+      {
+        title: "Desarrollador Frontend Trainee",
+        time: "2020 - 2021",
+        description:
+          "Mantenimiento y actualización de componentes de la aplicación web construida con React. Y actualización y mejoras de diseño de correos transaccionales.",
+      },
+    ],
+  },
+  {
+    company: "Grupo Cubo",
+    logo: CuboLogo.src,
+    link: "https://www.grupo-cubo.com/indexEN.html",
+    positions: [
+      {
+        title: "Desarrollador Fullstack",
+        time: "2019 - 2020",
+        description:
+          "Mantenimiento y actualización de la aplicación web construida en C# .NET Core, utilizando SQL Server como base de datos, en frontend integración con Angular",
+      },
+    ],
+  },
+];
+---
+
+<section class="flex flex-col justify-center items-center">
+  <Title title="Experiencia" />
+  <div class="mx-5 max-w-[1100px]">
+    {
+      experience.map((experience) => (
+        <TimeLineSection experience={experience} />
+      ))
+    }
+  </div>
+</section>

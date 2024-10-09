@@ -1,0 +1,21 @@
+---
+import "./timeline.css";
+
+interface TimelineProps {
+  color: string;
+  shape: "circle" | "polygon";
+}
+
+const { color, shape } = Astro.props as TimelineProps;
+---
+
+<div class="timeline flex flex-col justify-center items-center gap-2 pt-2">
+  {
+    shape === "circle" ? (
+      <div class="circle-timeline" style={`background-color: ${color}`} />
+    ) : (
+      <div class="polygon-timeline" style={`background-color: ${color}`} />
+    )
+  }
+  <div class="line-timeline" style={`background-color: ${color}`}></div>
+</div>

@@ -11,8 +11,11 @@ export default {
         maxwidth: "1100px",
       },
       colors: {
+        primary: "#fff",
         secondary: "#d1b000",
         tertiary: "#f1f7fecf",
+        titles: "#dfdfdfef",
+        paragraph: " #f1f7feb5",
       },
       backgroundColor: {
         secondary: "#d1b000",

@@ -1,0 +1,27 @@
+---
+import Timeline from "./Timeline.astro";
+
+import { type Position } from "./timelineType";
+
+interface TimeLineSectionProps {
+  position: Position;
+}
+
+const { position } = Astro.props as TimeLineSectionProps;
+const { title, time, description } = position;
+---
+
+<article class="">
+  <div>
+    <div class="flex gap-3">
+      <Timeline color="var(--text-color-titles)" />
+      <div>
+        <h3 class="text-lg text-secondary">{title}</h3>
+        <h4 class="text-sm font-secondary">{time}</h4>
+        <p class="text-base font-secondary">
+          {description}
+        </p>
+      </div>
+    </div>
+  </div>
+</article>

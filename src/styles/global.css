@@ -4,6 +4,8 @@
   --bg-color: #000;
   --text-color-primary: #fff;
   --text-color-secondary: #d1b000;
+  --text-color-titles: #dfdfdfef;
+  --text-color-paragraph: #f1f7feb5;
 }
 
 body {

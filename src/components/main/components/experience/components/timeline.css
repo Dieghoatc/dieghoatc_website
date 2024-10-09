@@ -1,0 +1,16 @@
+.circle-timeline {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.line-timeline {
+  width: 1px;
+  height: 100%;
+}
+
+.polygon-timeline {
+  width: 10px;
+  height: 10px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

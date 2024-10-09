@@ -1,0 +1,29 @@
+---
+import Timeline from "./Timeline.astro";
+import { type Experience } from "./timelineType";
+import TimeLineItem from "./TimeLineItem.astro";
+interface ExperienceProps {
+  experience: Experience;
+}
+
+const { experience } = Astro.props as ExperienceProps;
+const { company, logo, link, positions } = experience;
+---
+
+<div class="flex gap-3 my-4">
+  <Timeline color="var(--text-color-secondary)" shape="circle" />
+  <div>
+    <div class="flex gap-3 mb-2">
+      <a href={link} target="_blank">
+        <img src={logo} alt={company} class="w-10" />
+      </a>
+    </div>
+    <div>
+      <div class="flex gap-3">
+        <div class="flex flex-col gap-3">
+          {positions.map((position) => <TimeLineItem position={position} />)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
