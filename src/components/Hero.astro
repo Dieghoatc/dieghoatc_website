@@ -2,6 +2,8 @@
 import ImageProfile from "../assets/image-profile.webp";
 import Github from "../assets/github.svg";
 import Linkedin from "../assets/linkedin.svg";
+
+import pdfFile from "../docs/resume-es.pdf";
 import "./hero.css";
 ---
 
@@ -25,17 +27,23 @@ import "./hero.css";
     <div class="flex flex-col gap-6 justify-center items-center">
       <div class="flex gap-4">
         <div>
-          <a href="https://github.com/Dieghoatc" target="_blank"><img src={Github.src} alt="github" /></a>
+          <a href="https://github.com/Dieghoatc" target="_blank"
+            ><img src={Github.src} alt="github" /></a
+          >
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/dieghoatc/" target="_blank"><img src={Linkedin.src} alt="linkedin" /></a>
+          <a href="https://www.linkedin.com/in/dieghoatc/" target="_blank"
+            ><img src={Linkedin.src} alt="linkedin" /></a
+          >
         </div>
       </div>
 
       <div
         class="h-[40px] w-28 text-secondary border border-secondary rounded-full flex items-center justify-center text-md"
       >
-        <a href="https://drive.google.com/file/d/1XSQmjDtEKsvIJEZ32Z2thuHZQ7ekl6j9/view?usp=sharing">Descargar CV</a>
+        <a href={pdfFile} target="_blank" rel="noopener noreferrer"
+          >Descargar CV</a
+        >
       </div>
     </div>
   </div>

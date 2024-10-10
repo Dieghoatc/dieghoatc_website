@@ -3,6 +3,8 @@ import GirlImage from "../../../../assets/girl.png";
 import MaleImage from "../../../../assets/male.png";
 import ImageProfile2 from "../../../../assets/image-profile2.webp";
 import Title from "../Title.astro";
+
+import "./aboutme.css";
 ---
 
 <section class="relative w-full flex justify-center items-center" id="about-me">
@@ -10,19 +12,19 @@ import Title from "../Title.astro";
     <img
       src={GirlImage.src}
       alt="Imagen mujer"
-      class="opacity-65 hidden md:block md:scale-90 lg:scale-100 "
+      class="opacity-65 hidden md:block md:scale-90 lg:scale-100 mask"
     />
   </div>
   <div class="absolute bottom-[-62px] right-0 -z-10">
     <img
       src={MaleImage.src}
       alt="Imagen hombre"
-      class="opacity-65 hidden md:block md:scale-90 lg:scale-100 "
+      class="opacity-65 hidden md:block md:scale-90 lg:scale-100 mask"
     />
   </div>
   <div class="mx-5 mb-28 max-w-maxwidth">
     <Title title="Sobre mi" />
-    <div class="flex flex-col items-center justify-center gap-3 ">
+    <div class="flex flex-col items-center justify-center gap-3">
       <div
         class="h-32 w-32 border border-secondary rounded-full overflow-hidden"
       >
@@ -30,16 +32,16 @@ import Title from "../Title.astro";
       </div>
 
       <div class="flex flex-col justify-center items-center gap-2">
-        <h2 class="text-3xl ">Soy Diego Armando</h2>
+        <h2 class="text-3xl">Soy Diego Armando</h2>
         <h4 class="text-lg text-secondary">Software Developer</h4>
         <p class="font-secondary text-sm font-bold md:px-20 lg:px-60">
           Soy desarrollador de software con más de tres años de experiencia como
           Desarrollador Front-End. Apasionado por implementar en mis proyectos
           tecnologías como Next.js, Astro, desarrollo móvil con Kotlin y React
-          Native. En backend manejo tecnologias como Nodejs y Nestjs para el desarrollo e implementacion de API.
+          Native. En backend manejo tecnologias como Nodejs y Nestjs para el
+          desarrollo e implementacion de API.
         </p>
       </div>
     </div>
   </div>
-  
 </section>

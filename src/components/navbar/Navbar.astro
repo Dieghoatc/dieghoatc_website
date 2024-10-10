@@ -5,9 +5,11 @@ import "./menuMobile.css";
 import "./navbar.css";
 ---
 
-<div class="flex w-full flex-col py-2 fixed z-10 backdrop-blur-sm ">
-  <header class="flex justify-center " >
-    <div class="max-w-maxwidth flex w-full items-center justify-between mx-5 xl:mx-auto">
+<div class="flex w-full flex-col py-2 fixed z-10 backdrop-blur-sm">
+  <header class="flex justify-center">
+    <div
+      class="max-w-maxwidth flex w-full items-center justify-between mx-5 xl:mx-auto"
+    >
       <div class="flex items-center gap-2">
         <div class="logo">
           <img
@@ -17,7 +19,7 @@ import "./navbar.css";
           />
         </div>
         <div>
-          <span ><a href="/" class="text-secondary text-2xl">Dieghoatc</a></span>
+          <span><a href="/" class="text-secondary text-2xl">Dieghoatc</a></span>
         </div>
       </div>
 
@@ -28,15 +30,12 @@ import "./navbar.css";
             <!-- <li><a href="#">Resumen</a></li> -->
             <li><a href="#about-me">Sobre mi</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </div>
 
-      <div
-        class="flex flex-col gap-2 items-center md:hidden"
-        id="toggle-on"
-      >
+      <div class="flex flex-col gap-2 items-center md:hidden" id="toggle-on">
         <div
           class="bg-white w-7 h-0.5 border border-white rounded button-control"
           id="button-top"
@@ -52,32 +51,33 @@ import "./navbar.css";
           id="button-bottom"
         >
         </div>
-      </div>     
+      </div>
     </div>
     <div
-        class="text-2xl flex justify-center absolute top-[68px] w-full menu-dropdown hidden-menu bg-black"
-        id="show-menu"
-      >
-        <nav id="list-menu">
-          <ul class="flex flex-col gap-3 items-center">
-            <li class="item-position contract-portfolio" id="deploy-portfolio">
-              <a href="#portfolio">Portafolio</a>
-            </li>
-            <li class="item-position contract-resume" id="deploy-resume">
-              -
-            </li>
-            <li class="item-position contract-aboutme" id="deploy-aboutme">
-              <a href="#about-me">Sobre mi</a>  
-            </li>
-            <li class="item-position contract-blog" id="deploy-blog"><a href="#">Blog</a></li>
-            <li class="item-position contract-contact" id="deploy-contact">   
-            </li>
-          </ul>
-        </nav>
-      </div>
+      class="text-2xl flex justify-center absolute top-[68px] w-full menu-dropdown hidden-menu bg-black"
+      id="show-menu"
+    >
+      <nav id="list-menu">
+        <ul class="flex flex-col gap-3 items-center">
+          <li class="item-position contract-portfolio" id="deploy-portfolio">
+            <a href="#portfolio">Portafolio</a>
+          </li>
+          <li class="item-position contract-resume" id="deploy-resume">-</li>
+          <li class="item-position contract-aboutme" id="deploy-aboutme">
+            <a href="#about-me">Sobre mi</a>
+          </li>
+          <li class="item-position contract-blog" id="deploy-blog">
+            <a href="#">Blog</a>
+          </li>
+          <li class="item-position contract-contact" id="deploy-contact">
+            <a href="#contact">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </div>
- 
+
 <script>
   import { burgerContol } from "./menuMobile";
 
@@ -86,7 +86,6 @@ import "./navbar.css";
   const buttonMiddle = document.getElementById("button-middle");
   const buttonGround = document.getElementById("button-bottom");
 
-
   const showMenu = document.getElementById("show-menu");
 
   const portfolio = document.getElementById("deploy-portfolio");
@@ -94,8 +93,8 @@ import "./navbar.css";
   const aboutMe = document.getElementById("deploy-aboutme");
   const blog = document.getElementById("deploy-blog");
   const contact = document.getElementById("deploy-contact");
-  
-  const listMenu = document.getElementById('list-menu')
+
+  const listMenu = document.getElementById("list-menu");
 
   if (
     toggleOn &&
@@ -107,7 +106,8 @@ import "./navbar.css";
     resume &&
     aboutMe &&
     blog &&
-    contact && listMenu
+    contact &&
+    listMenu
   ) {
     const buttonSides = {
       toggleOn,
@@ -119,10 +119,10 @@ import "./navbar.css";
       resume,
       aboutMe,
       blog,
-      contact,listMenu
+      contact,
+      listMenu,
     };
 
     burgerContol(buttonSides);
   }
-  
 </script>
